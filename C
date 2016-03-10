@@ -1,0 +1,22 @@
+/*
+Write a program that safely compares floating-point numbers with precision of 0.000001. 
+Examples:(5.3 ; 6.01) -> false;  (5.00000001 ; 5.00000003) -> true
+ */
+
+using System;
+
+class FloatingPointsNumber
+{
+    static void Main(string[] args)
+    {
+        float a = 5.3f;
+        float b = 6.01f;
+        double c = 5.00000001;
+        double d = 5.00000003;
+        bool equalab = Math.Abs(a - b) <= 0.0000001;
+        bool equalcd = Math.Abs(c - d) <= 0.0000001;
+
+        Console.WriteLine(" {0} and {1} equal? {2}", a, b, equalab);
+        Console.WriteLine(" {0} and {1} equal? {2}", c, d, equalcd);
+    }
+}
