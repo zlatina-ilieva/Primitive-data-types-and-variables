@@ -1,0 +1,28 @@
+/*
+Create a program that assigns null values to an integer and to double variables. 
+Try to print them on the console, try to add some values or the null literal to them 
+and see the result.
+ */
+
+using System;
+
+class NullVariables
+{
+    static void Main()
+    {
+        int? i = null;
+        double? d = null;
+        Console.WriteLine(i);
+        Console.WriteLine(d);
+        i = 5;
+        d = 15.4;
+        Console.WriteLine(i);
+        Console.WriteLine(d);
+        System.Nullable<int> i2 = null;
+        System.Nullable<double> d2 = null;
+        Console.WriteLine(i2);
+        Console.WriteLine(d2);
+        i = null;
+        Console.WriteLine("i: " + i);
+    }
+}
