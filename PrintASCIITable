@@ -1,0 +1,23 @@
+/*
+Write a program that prints the entire ASCII table of characters on the console.
+ */
+
+using System;
+using System.Text;
+
+class PrintAsciiTable
+    {
+        static void Main()
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+            int i;
+            for (i = 0; i < 128; i++)
+            {
+                Console.Write("Decimal: " + i);
+                Console.Write(" Char: " + (char)i);
+                Console.Write(" Hex: " + i.ToString("X")); 
+                Console.Write(" Oct: " + Convert.ToString(i, 8));
+                Console.WriteLine();
+            }
+        }
+    }
